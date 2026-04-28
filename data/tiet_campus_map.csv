@@ -1,0 +1,54 @@
+source,destination,distance
+Main Gate,KRAVINGS,170
+Main Gate,OAT,225
+Main Gate,COS Complex,135
+KRAVINGS,OAT,80
+KRAVINGS,COS Complex,105
+KRAVINGS,TAN Building,72
+OAT,Auditorium,280
+OAT,C-Block,255
+COS Complex,Library,95
+COS Complex,Health Centre,270
+Library,Health Centre,225
+Library,CSED,48
+Library,G-Block,120
+Library,H-Block,175
+Library,Venture Lab,48
+CSED,H-Block,128
+CSED,TAN Building,40
+G-Block,F-Block,72
+G-Block,E-Block,112
+G-Block,SBI Bank,160
+F-Block,E-Block,48
+F-Block,C-Block,80
+E-Block,Auditorium,144
+E-Block,Directorate,48
+E-Block,ELC,48
+Auditorium,Directorate,95
+Directorate,C-Block,72
+H-Block,Mechanical Dept,200
+H-Block,TSLAS,95
+Mechanical Dept,TSLAS,105
+ELC,TAN Building,48
+TAN Building,Health Centre,265
+SBI Bank,G-Block Canteen,144
+G-Block Canteen,Street,95
+Street,KRAVINGS,128
+Health Centre,Agira Hall,288
+Agira Hall,Amritam Hall,16
+Agira Hall,Neeram Hall,224
+Amritam Hall,Prithvi Hall,95
+Prithvi Hall,Tejas Hall,64
+Tejas Hall,Vyan Hall,24
+Vyan Hall,Viyat Hall,48
+Viyat Hall,Vyom Hall,168
+Vyom Hall,Anantam Hall,136
+Anantam Hall,Ananta Hall,168
+Ananta Hall,Ambaram Hall,144
+Vasudha Hall E,Vasudha Hall G,48
+Vasudha Hall G,Ira Hall,95
+Ira Hall,Vahni Hall,64
+Vahni Hall,Dhriti Hall,48
+Dhriti Hall,Hostel FRF,72
+Hostel FRF,Hostel FRG,48
+Neeram Hall,Vasudha Hall E,304
