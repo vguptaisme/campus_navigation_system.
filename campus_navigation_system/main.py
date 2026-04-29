@@ -130,35 +130,35 @@ def dijkstra(graph, start, end):
 # 4. Show Route and Command-Line Interface
 def show_route(start, end, path, distance):
     print("\n" + "="*55)
-    print("         🗺️  SHORTEST ROUTE FOUND — TIET CAMPUS")
+    print("           SHORTEST ROUTE FOUND — TIET CAMPUS")
     print("="*55)
-    print(f"\n  🟢 FROM   :  {start}")
-    print(f"  🔴 TO     :  {end}")
-    print(f"  📏 DISTANCE: {distance} meters (~{distance//80} min walk)\n")
-    print("  🚶 Step-by-step Directions:")
+    print(f"\n   FROM   :  {start}")
+    print(f"   TO     :  {end}")
+    print(f"   DISTANCE: {distance} meters (~{distance//80} min walk)\n")
+    print("   Step-by-step Directions:")
     print("  " + "-"*45)
 
     for i, loc in enumerate(path):
         if i == 0:
-            print(f"  🟢  START    →  {loc}")
+            print(f"    START    →  {loc}")
         elif i == len(path) - 1:
-            print(f"  🔴  ARRIVE   →  {loc}")
+            print(f"    ARRIVE   →  {loc}")
         else:
-            print(f"  🔵  Step {i:<2}  →  {loc}")
+            print(f"    Step {i:<2}  →  {loc}")
 
     print("  " + "-"*45)
-    print(f"\n  ✅ You have arrived at {end}!")
+    print(f"\n   You have arrived at {end}!")
     print("="*55)
 
 
 def run_tiet_navigation():
     print("="*55)
-    print("   🏫 TIET CAMPUS NAVIGATION SYSTEM FOR FRESHERS")
+    print("    TIET CAMPUS NAVIGATION SYSTEM FOR FRESHERS")
     print("      Thapar Institute of Engineering & Technology")
     print("="*55)
 
     while True:
-        print("\n📍 CAMPUS LOCATIONS:")
+        print("\n CAMPUS LOCATIONS:")
         print("-"*45)
         for i, loc in enumerate(locations, 1):
             print(f"  {i:2}. {loc}")
@@ -167,44 +167,42 @@ def run_tiet_navigation():
         # Get START
         while True:
             try:
-                s = int(input("\n👉 Enter START location number: "))
+                s = int(input("\n Enter START location number: "))
                 if 1 <= s <= len(locations):
                     start = locations[s-1]
                     break
-                print(f"❌ Enter 1 to {len(locations)}")
+                print(f"Enter 1 to {len(locations)}")
             except ValueError:
-                print("❌ Numbers only!")
+                print("Numbers only!")
 
         # Get DESTINATION
         while True:
             try:
-                e = int(input("👉 Enter DESTINATION number  : "))
+                e = int(input(" Enter DESTINATION number  : "))
                 if 1 <= e <= len(locations):
                     end = locations[e-1]
                     break
-                print(f"❌ Enter 1 to {len(locations)}")
+                print(f" Enter 1 to {len(locations)}")
             except ValueError:
-                print("❌ Numbers only!")
+                print(" Numbers only!")
 
         if start == end:
-            print(f"\n⚠️  You are already at {start}!")
+            print(f"\n  You are already at {start}!")
         else:
-            print(f"\n🔍 Finding shortest path...")
+            print(f"\n Finding shortest path...")
             distance, path = dijkstra(graph, start, end)
 
             if distance == float('inf'):
-                print("❌ No path found between these locations!")
+                print(" No path found between these locations!")
             else:
                 show_route(start, end, path, distance)
 
-        again = input("\n🔄 Navigate again? (yes/no): ").strip().lower()
+        again = input("\n Navigate again? (yes/no): ").strip().lower()
         if again not in ['yes', 'y']:
-            print("\n👋 Safe travels at TIET!")
-            print("   Made with ❤️  by a fellow Thaparite 🎓")
             break
 
 
 if __name__ == "__main__":
-    # In a headless environment like Colab, Tkinter GUI applications cannot be displayed.
+    
     run_tiet_navigation()
     
